@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#HomePageSitePrincipal"> <!-- trocar -->
+                <img src="https://github.com/MakandaAraujo/Fotos/blob/main/Logo%20(1).png?raw=true" alt="Logo" id="logo-image">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#lojinha">Lojinha</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-receber">Receber</button>
+                <button class="btn-doar">Doar</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Conte com a Gente!</h1>
+        <h1>Preencha seus dados para receber a ajuda que precisa.</h1>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Seu Nome Completo" id="nome" name="nome" required>
+            </div>
+        
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" placeholder="xxx.xxx.xxx-xx" id="cpf" name="cpf" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" placeholder="(00)00000-0000" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="dpp">Data provavel Parto (DPP)</label>
+                    <input type="date" id="dpp" name="dpp" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group sex-toggle">
+                    <label>Sexo do Bebê:</label>
+                    <button type="button" class="sex-btn" onclick="selectSex('male')">Masculino</button>
+                    <button type="button" class="sex-btn" onclick="selectSex('female')">Feminino</button>
+                    <button type="button" class="sex-btn" onclick="selectSex('unknown')">Não Sei</button>
+                </div>                
+                <div class="form-group">
+                    <label for="tempo-gestacao">Tempo de Gestação</label>
+                    <input type="text" placeholder="Em meses" id="tempo-gestacao" name="tempo-gestacao" required>
+                </div>
+                <div class="form-group">
+                    <label for="instagram">Instagram (aberto)</label>
+                    <input type="text" placeholder="@SeuInstagram" id="instagram" name="instagram" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" name="rua" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" name="numero" required>
+                </div>
+            </div>
+        
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" name="estado" required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" placeholder="00000-000" id="cep" name="cep" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Digite um Email Valido" id="email" name="email" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="historia">Conte sua história</label>
+                <textarea id="historia" placeholder="Por quê você precisa de ajuda?" name="historia" rows="4" required></textarea>
+            </div>
+        
+            <div class="form-group">
+                <label for="image-usage">Aceita o uso de imagem?</label>
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="image-usage">
+                        <span class="slider"></span>
+                    </label>
+                    <div class="switch-labels">
+                        <span class="switch-label">Sim</span>
+                        <span class="switch-label">Não</span>
+                    </div>
+                </div>
+            </div>            
+            <button type="submit" id="submit">Enviar</button>
+        </form>     
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://github.com/MakandaAraujo/Fotos/blob/main/abrntexto%20(1).png?raw=true" alt="Logo" id="footer-logo">
+            </div>
+            <div class="footer-social">
+                <p>Acompanhe nas redes</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
